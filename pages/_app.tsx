@@ -1,3 +1,5 @@
+import Layout from '@/components/Layout/Layout';
+import Modal from '@/components/Modal/Modal';
 import Spinner from '@/components/Spinner/Spinner';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
@@ -32,7 +34,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <RecoilRoot>
-        {isLoading ? <Spinner /> : <Component {...pageProps} />}
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          <Layout url={`https://chohyejean.co.kr${router.asPath}`}>
+            <Component {...pageProps} />
+            <Modal />
+          </Layout>
+        )}
       </RecoilRoot>
     </>
   );
