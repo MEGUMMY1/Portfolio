@@ -1,0 +1,75 @@
+@import '@/styles/mixin.scss';
+
+.container {
+  border-radius: 0 0 20px 20px;
+  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+  @include flex-center;
+  position: relative;
+  overflow: auto;
+}
+.container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #0081a7;
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #0081a7;
+}
+
+.title {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  font-size: 64px;
+  font-family: BlackHanSans;
+  color: #1d3557;
+}
+
+.activity {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 400px;
+  padding-bottom: 100px;
+}
+
+.activity_item {
+  padding: 15px;
+  margin: 15px;
+  width: 50%;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.07);
+  background-color: var(--white);
+}
+
+.activity_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity_name {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #0081a7;
+}
+
+.activity_period {
+  color: #575757;
+}
+
+.activity_description {
+  color: #575757;
+  margin-top: 15px;
+}

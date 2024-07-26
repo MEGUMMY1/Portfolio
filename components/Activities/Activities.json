@@ -1,0 +1,37 @@
+[
+  {
+    "activity_name": "코어 자바스크립트 스터디",
+    "description": "코드잇 부트캠프 內 스터디",
+    "period": "2024.02.24 - 2024.04.06"
+  },
+  {
+    "activity_name": "멋쟁이사자처럼 중앙해커톤",
+    "description": "디지털 격차 완화 해커톤 FE",
+    "period": "2023.08.18 - 2023.08.19"
+  },
+  {
+    "activity_name": "멋쟁이사자처럼 대학11기",
+    "description": "대학생 창업 IT 동아리",
+    "period": "2023.03 ~ 2023.12"
+  },
+  {
+    "activity_name": "SCH SW창업동아리 I-GO",
+    "description": "교내 창업 SW 동아리",
+    "period": "2023.03 ~ 2023.06"
+  },
+  {
+    "activity_name": "SCH SW프런티어 1기",
+    "description": "교내 SW 프런티어",
+    "period": "2022.06 ~ 2022.12"
+  },
+  {
+    "activity_name": "학과 학생회",
+    "description": "부학회장",
+    "period": "2022.03 ~ 2023.02"
+  },
+  {
+    "activity_name": "컴퓨터소프트웨어공학 전공",
+    "description": "",
+    "period": "2020.03 ~ 2024.02"
+  }
+]
