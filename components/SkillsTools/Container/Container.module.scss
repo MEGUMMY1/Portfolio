@@ -1,0 +1,24 @@
+@import '@/styles/mixin.scss';
+
+.container {
+  width: 80%;
+  background-color: #373737;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.icon_container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.h2 {
+  color: #b6b6b6;
+  font-size: 28px;
+  font-weight: 500;
+  font-family: BlackHanSans;
+}

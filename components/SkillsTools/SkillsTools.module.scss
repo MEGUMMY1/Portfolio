@@ -1,0 +1,28 @@
+@import '@/styles/mixin.scss';
+
+.container {
+  border-radius: 0 0 20px 20px;
+  background-color: #232323;
+  width: 100%;
+  height: 100%;
+  @include flex-center;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  font-size: 64px;
+  font-family: BlackHanSans;
+  color: var(--white);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  flex-direction: column;
+  @include flex-center;
+  margin-top: 60px;
+}
