@@ -4,9 +4,33 @@ import Image from 'next/image';
 import { HeaderProps } from './Header.types';
 import Dropdown from '../Dropdown/Dropdown';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Header({ url }: HeaderProps) {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const router = useRouter();
+
+  const pages = [
+    '/about-me',
+    '/education',
+    '/certifications',
+    '/skills-tools',
+    '/activities',
+    '/projects',
+  ];
+
+  const currentPageIndex = pages.indexOf(router.pathname);
+
+  const goToNextPage = () => {
+    const nextPage = pages[(currentPageIndex + 1) % pages.length];
+    router.push(nextPage);
+  };
+
+  const goToPreviousPage = () => {
+    const prevPage =
+      pages[(currentPageIndex - 1 + pages.length) % pages.length];
+    router.push(prevPage);
+  };
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -20,7 +44,7 @@ export default function Header({ url }: HeaderProps) {
         <div className={styles.color_button} />
       </div>
       <div className={styles.button_container}>
-        <button className={styles.button_bg}>
+        <button className={styles.button_bg} onClick={goToPreviousPage}>
           <Image
             src="/icon/left_arrow.svg"
             width={40}
@@ -28,12 +52,12 @@ export default function Header({ url }: HeaderProps) {
             alt="왼쪽 화살표"
           />
         </button>
-        <button className={styles.button_bg}>
+        <button className={styles.button_bg} onClick={goToNextPage}>
           <Image
             src="/icon/right_arrow.svg"
             width={40}
             height={40}
-            alt="왼쪽 화살표"
+            alt="오른쪽 화살표"
           />
         </button>
         <Link href="/">
