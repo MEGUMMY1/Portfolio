@@ -5,8 +5,9 @@
 }
 
 .title {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 800;
+  color: var(--camel);
 }
 
 .overlay {
@@ -24,7 +25,7 @@
 
 .container {
   background: var(--white);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   position: relative;
   width: 30%;
