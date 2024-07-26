@@ -16,10 +16,8 @@ export default function Education() {
               클라우드컴퓨팅, 컴퓨터 아키텍처, DB, 리눅스
             </p>
             <p>· C, C++, Python, Java, Html, CSS</p>
-            <p>
-              · 동아리 활동(멋쟁이 사자처럼, 아이고, SW프런티어) 학과
-              부학회장(2022)
-            </p>
+            <p>· 동아리 활동(멋쟁이 사자처럼, 아이고, SW프런티어)</p>
+            <p>· 학과 부학회장(2022)</p>
           </h5>
         </div>
         <div className={styles.item_container}>
