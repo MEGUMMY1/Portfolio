@@ -1,0 +1,38 @@
+@import '@/styles/mixin.scss';
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  @include flex-center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg_text {
+  font-family: 'BlackHanSans';
+  color: var(--white);
+  font-size: 12rem;
+  transform: rotate(90deg);
+  margin: 0;
+  position: absolute;
+  opacity: 0.3;
+  transform: rotate(90deg);
+}
+
+.bg_text:first-of-type {
+  left: -5%;
+  bottom: 10%;
+}
+
+.bg_text:last-of-type {
+  right: -15%;
+}
+
+.window_container {
+  width: 70%;
+  height: 75%;
+  background-color: var(--white);
+  border-radius: 20px;
+  position: relative;
+}
