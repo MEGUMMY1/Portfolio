@@ -24,6 +24,7 @@ export default function AboutMe() {
           width={500}
           height={500}
           alt="혜진 이미지"
+          className={styles.image}
         />
       </div>
       <div className={styles.bubble_container}>
