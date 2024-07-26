@@ -1,0 +1,47 @@
+@import '@/styles/mixin.scss';
+
+.container {
+  border-radius: 0 0 20px 20px;
+  background-color: #f3eed9;
+  width: 100%;
+  height: 100%;
+  @include flex-center;
+  position: relative;
+  overflow: auto;
+}
+
+.container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #eb7262;
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #eb7262;
+}
+
+.title {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  font-size: 64px;
+  font-family: BlackHanSans;
+  color: #eb7262;
+}
+
+.card_container {
+  margin-top: 55%;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}

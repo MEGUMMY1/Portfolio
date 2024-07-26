@@ -1,0 +1,55 @@
+@import '@/styles/mixin.scss';
+
+.container {
+  width: 300px;
+  height: 350px;
+  background-color: var(--white);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  padding-top: 10px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content {
+  padding: 15px;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+  color: #eb7262;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 16px;
+  color: #373737;
+  margin: 10px 0;
+  letter-spacing: -0.5px;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.link {
+  &:hover {
+    transform: scale(1.2);
+  }
+}
