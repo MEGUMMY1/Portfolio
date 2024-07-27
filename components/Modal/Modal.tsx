@@ -26,18 +26,17 @@ export default function Modal() {
   return modal.isOpen ? (
     <div className={styles.overlay}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <p className={styles.title}>팀원 리뷰</p>
-          <Image
-            src="/icon/close.svg"
-            width={20}
-            height={20}
-            onClick={closeModal}
-            alt="close button"
-            className={styles.close_button}
-          />
-        </div>
+        <p className={styles.title}>팀원 리뷰</p>
         <div className={styles.content}>{modal.content}</div>
+        <Image
+          src="/icon/close.svg"
+          width={20}
+          height={20}
+          onClick={closeModal}
+          alt="close button"
+          className={styles.close_button}
+          tabIndex={0}
+        />
       </div>
     </div>
   ) : null;

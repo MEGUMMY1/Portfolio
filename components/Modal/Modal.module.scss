@@ -1,13 +1,14 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+@import '@/styles/mixin.scss';
 
 .title {
   font-size: 30px;
   font-weight: 800;
   color: var(--camel);
+  margin-top: 30px;
+
+  @media (max-width: $Mobile) {
+    font-size: 24px;
+  }
 }
 
 .overlay {
@@ -25,17 +26,20 @@
 
 .container {
   background: var(--white);
-  padding: 30px;
+  padding: 0 30px;
   border-radius: 10px;
   position: relative;
-  width: 30%;
-  height: 550px;
+  width: 400px;
+  height: 450px;
+
+  @media (max-width: $Mobile) {
+    width: 90%;
+  }
 }
 
 .close_button {
   cursor: pointer;
-}
-
-.content {
-  margin-top: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }

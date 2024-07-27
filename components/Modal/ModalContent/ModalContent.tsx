@@ -58,7 +58,7 @@ export default function ModalContent() {
           </button>
         ))}
       </div>
-      <div className={styles.tabContent}>{tabs[activeTab].content}</div>
+      <div className={styles.tab_content}>{tabs[activeTab].content}</div>
     </div>
   );
 }
