@@ -6,8 +6,16 @@
   width: 100%;
   height: 100%;
   @include flex-center;
+  padding: 0 50px;
   position: relative;
   overflow: auto;
+
+  @media (max-width: $Mobile) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+  }
 }
 
 .container::-webkit-scrollbar {
@@ -35,6 +43,13 @@
   font-size: 64px;
   font-family: BlackHanSans;
   color: #eb7262;
+
+  @media (max-width: $Mobile) {
+    margin: 30px 0;
+    font-size: 40px;
+    position: static;
+    text-align: center;
+  }
 }
 
 .card_container {
@@ -44,4 +59,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
+
+  @media (max-width: $Mobile) {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
 }
