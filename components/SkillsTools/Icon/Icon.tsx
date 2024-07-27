@@ -7,7 +7,7 @@ export default function Icon({ image, title }: IconProps) {
   return (
     <div className={styles.container}>
       <Image src={image} width={30} height={30} alt={title} />
-      <p>{title}</p>
+      <p className={styles.title}>{title}</p>
     </div>
   );
 }

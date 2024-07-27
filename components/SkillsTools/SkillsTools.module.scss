@@ -1,12 +1,19 @@
 @import '@/styles/mixin.scss';
 
 .container {
+  padding: 0 50px;
   border-radius: 0 0 20px 20px;
   background-color: #232323;
   width: 100%;
   height: 100%;
   @include flex-center;
   position: relative;
+
+  @media (max-width: $Mobile) {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 10px 20px 10px;
+  }
 }
 
 .title {
@@ -16,6 +23,13 @@
   font-size: 64px;
   font-family: BlackHanSans;
   color: var(--white);
+
+  @media (max-width: $Mobile) {
+    margin: 30px 0;
+    font-size: 40px;
+    position: static;
+    text-align: center;
+  }
 }
 
 .map {
@@ -25,4 +39,10 @@
   flex-direction: column;
   @include flex-center;
   margin-top: 60px;
+
+  @media (max-width: $Mobile) {
+    justify-content: flex-start;
+    margin-top: 0px;
+    overflow-y: auto;
+  }
 }
