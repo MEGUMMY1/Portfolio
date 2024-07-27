@@ -9,12 +9,24 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+
+  @media (max-width: $Mobile) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+  }
 }
 
 .left_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: $Mobile) {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .title {
@@ -24,11 +36,28 @@
   font-size: 64px;
   font-family: BlackHanSans;
   color: var(--brown);
+
+  @media (max-width: $Mobile) {
+    margin: 30px 0;
+    font-size: 40px;
+    position: static;
+    text-align: center;
+  }
 }
 
 .image {
   position: absolute;
   bottom: 0;
+  background-image: url('/image/aboutme_bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+
+  @media (max-width: $Mobile) {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .bubble_container {
@@ -37,6 +66,16 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  position: absolute;
+  right: 50px;
+
+  @media (max-width: $Mobile) {
+    padding-top: 100px;
+    right: 0;
+    position: relative;
+    width: 90%;
+    align-items: center;
+  }
 }
 
 .speech_bubble {
@@ -64,6 +103,21 @@
     margin-top: -12.5px;
     margin-left: -25px;
   }
+
+  @media (max-width: $Mobile) {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px 20px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .review_button {
@@ -82,5 +136,15 @@
 
   &:hover {
     background-color: #2c251b;
+  }
+
+  @media (max-width: $Mobile) {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    padding: 15px;
+    bottom: 5%;
+    right: 5%;
+    border: 1px solid var(--ivory);
   }
 }

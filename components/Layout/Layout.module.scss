@@ -18,6 +18,10 @@
   position: absolute;
   opacity: 0.3;
   transform: rotate(90deg);
+
+  @media (max-width: $Mobile) {
+    display: none;
+  }
 }
 
 .bg_text:first-of-type {
@@ -30,9 +34,15 @@
 }
 
 .window_container {
+  margin-bottom: 60px;
   width: 70%;
   height: 75%;
   background-color: var(--white);
   border-radius: 20px;
   position: relative;
+
+  @media (max-width: $Mobile) {
+    width: 95%;
+    height: 75%;
+  }
 }
