@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import Image from 'next/image';
 import styles from './Modal.module.scss';
+import useKeyPress from '@/hooks/useKeyPress';
 
 export default function Modal() {
   const [modal, setModal] = useRecoilState(modalState);
@@ -23,6 +24,8 @@ export default function Modal() {
     };
   }, [modal.isOpen]);
 
+  useKeyPress('Enter', closeModal);
+
   return modal.isOpen ? (
     <div className={styles.overlay}>
       <div className={styles.container}>
@@ -36,6 +39,9 @@ export default function Modal() {
           alt="close button"
           className={styles.close_button}
           tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') closeModal();
+          }}
         />
       </div>
     </div>

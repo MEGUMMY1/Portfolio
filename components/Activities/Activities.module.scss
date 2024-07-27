@@ -5,10 +5,9 @@
   background-color: var(--white);
   width: 100%;
   height: 100%;
-  padding: 0 50px;
+  padding: 10px 50px;
   @include flex-center;
   position: relative;
-  overflow: auto;
 
   @media (max-width: $Mobile) {
     flex-direction: column;
@@ -16,23 +15,6 @@
     align-items: center;
     padding: 0 10px 20px;
   }
-}
-.container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.container::-webkit-scrollbar-thumb {
-  background: #0081a7;
-  border-radius: 10px;
-}
-
-.container::-webkit-scrollbar-thumb:hover {
-  background: #0081a7;
 }
 
 .title {
@@ -44,7 +26,7 @@
   color: #1d3557;
 
   @media (max-width: $Mobile) {
-    margin: 30px 0 0 0;
+    margin: 30px 0;
     font-size: 40px;
     position: static;
     text-align: center;
@@ -52,25 +34,44 @@
 }
 
 .activity {
-  width: 100%;
+  width: 50%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 400px;
-  padding-bottom: 100px;
+  overflow-y: auto;
+  padding-right: 10px;
 
   @media (max-width: $Mobile) {
     padding: 0;
+    width: 100%;
   }
+}
+
+.activity::-webkit-scrollbar {
+  width: 8px;
+}
+
+.activity::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.activity::-webkit-scrollbar-thumb {
+  background: #0081a7;
+  border-radius: 10px;
+}
+
+.activity::-webkit-scrollbar-thumb:hover {
+  background: #0081a7;
 }
 
 .activity_item {
   padding: 15px;
-  margin: 15px;
-  width: 50%;
+  margin: 15px 0;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.07);
   background-color: var(--white);
-
+  width: 100%;
   @media (max-width: $Mobile) {
     width: 95%;
   }

@@ -25,7 +25,7 @@ export default function AboutMe() {
         setCurrentBubbleIndex(
           (prevIndex) => (prevIndex + 1) % speechBubbles.length
         );
-      }, 3000);
+      }, 2500);
 
       return () => clearInterval(interval);
     }
