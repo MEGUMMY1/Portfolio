@@ -4,6 +4,7 @@ import { useSetRecoilState } from 'recoil';
 import { modalState } from '@/states/modalState';
 import ModalContent from '../Modal/ModalContent/ModalContent';
 import { motion, AnimatePresence } from 'framer-motion';
+import useIsMobile from '@/hooks/useIsMobile';
 
 const speechBubbles = [
   '안녕하세요. Front-end 주니어 개발자 조혜진입니다.',
@@ -16,18 +17,7 @@ const speechBubbles = [
 export default function AboutMe() {
   const setModal = useSetRecoilState(modalState);
   const [currentBubbleIndex, setCurrentBubbleIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (isMobile) {
