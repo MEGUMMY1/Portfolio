@@ -1,6 +1,8 @@
 @import '@/styles/mixin.scss';
 
 .container {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 60px;
   display: flex;

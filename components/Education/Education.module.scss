@@ -38,6 +38,7 @@
 .items {
   @include flex-center;
   gap: 40px;
+  height: 100%;
 
   @media (max-width: $Mobile) {
     flex-direction: column;
@@ -48,28 +49,10 @@
   }
 }
 
-.items::-webkit-scrollbar {
-  width: 8px;
-}
-
-.items::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.items::-webkit-scrollbar-thumb {
-  background: var(--gray50);
-  border-radius: 10px;
-}
-
-.items::-webkit-scrollbar-thumb:hover {
-  background: var(--gray50);
-}
-
 .item_container {
   margin-top: 50px;
-  width: 600px;
-  height: 510px;
+  width: 40%;
+  height: 70%;
   background-color: var(--white);
   border-radius: 10px;
   padding: 20px;
@@ -117,14 +100,34 @@
   .h5 {
     font-size: 18px;
     margin-top: 15px;
+    padding-right: 10px;
     color: var(--gray50);
     line-height: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    overflow-y: auto;
 
     @media (max-width: $Mobile) {
       font-size: 16px;
     }
+  }
+
+  .h5::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .h5::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .h5::-webkit-scrollbar-thumb {
+    background: var(--gray50);
+    border-radius: 10px;
+  }
+
+  .h5::-webkit-scrollbar-thumb:hover {
+    background: var(--gray50);
   }
 }

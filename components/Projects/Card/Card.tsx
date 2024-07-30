@@ -14,16 +14,20 @@ export default function Card({
 }: CardProps) {
   return (
     <div className={styles.container}>
-      <Image
-        src={image}
-        alt={title}
-        className={styles.image}
-        width={280}
-        height={180}
-      />
+      <div className={styles.image_container}>
+        <Image
+          src={image}
+          alt={title}
+          className={styles.image}
+          width={240}
+          height={130}
+        />
+      </div>
       <div className={styles.content}>
-        <h2 className={styles.title}>{title}</h2>
-        <p className={styles.description}>{description}</p>
+        <div>
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.description}>{description}</p>
+        </div>
         <div className={styles.links}>
           {github && (
             <Link href={github} target="_blank">

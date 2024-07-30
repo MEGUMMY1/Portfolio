@@ -8,7 +8,6 @@
   @include flex-center;
   padding: 0 50px;
   position: relative;
-  overflow: auto;
 
   @media (max-width: $Mobile) {
     flex-direction: column;
@@ -16,24 +15,6 @@
     align-items: center;
     padding: 0 10px;
   }
-}
-
-.container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.container::-webkit-scrollbar-thumb {
-  background: #eb7262;
-  border-radius: 10px;
-}
-
-.container::-webkit-scrollbar-thumb:hover {
-  background: #eb7262;
 }
 
 .title {
@@ -53,16 +34,37 @@
 }
 
 .card_container {
-  margin-top: 55%;
-  padding-bottom: 60px;
+  margin-top: 10%;
+  padding-right: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  overflow-y: auto;
   justify-content: center;
+  height: 70%;
 
   @media (max-width: $Mobile) {
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 10%;
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
   }
+}
+
+.card_container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card_container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.card_container::-webkit-scrollbar-thumb {
+  background: #eb7262;
+  border-radius: 10px;
+}
+
+.card_container::-webkit-scrollbar-thumb:hover {
+  background: #eb7262;
 }
