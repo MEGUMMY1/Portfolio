@@ -4,33 +4,11 @@ import Image from 'next/image';
 import { HeaderProps } from './Header.types';
 import Dropdown from '../Dropdown/Dropdown';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import usePageNavigation from '@/hooks/usePageNavigation';
 
 export default function Header({ url }: HeaderProps) {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const router = useRouter();
-
-  const pages = [
-    '/about-me',
-    '/education',
-    '/certifications',
-    '/skills-tools',
-    '/activities',
-    '/projects',
-  ];
-
-  const currentPageIndex = pages.indexOf(router.pathname);
-
-  const goToNextPage = () => {
-    const nextPage = pages[(currentPageIndex + 1) % pages.length];
-    router.push(nextPage);
-  };
-
-  const goToPreviousPage = () => {
-    const prevPage =
-      pages[(currentPageIndex - 1 + pages.length) % pages.length];
-    router.push(prevPage);
-  };
+  const { goToNextPage, goToPreviousPage } = usePageNavigation();
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
