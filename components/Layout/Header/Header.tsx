@@ -33,6 +33,7 @@ export default function Header({ url }: HeaderProps) {
             height={40}
             alt="왼쪽 화살표"
           />
+          <span className={styles.tooltip}>이전 페이지로 이동</span>
         </button>
         <button
           className={`${styles.button_bg} ${
@@ -46,6 +47,7 @@ export default function Header({ url }: HeaderProps) {
             height={40}
             alt="오른쪽 화살표"
           />
+          <span className={styles.tooltip}>다음 페이지로 이동</span>
         </button>
         <Link href="/">
           <button className={styles.button_bg}>
@@ -55,6 +57,7 @@ export default function Header({ url }: HeaderProps) {
               height={30}
               alt="메인 이동 버튼"
             />
+            <span className={styles.tooltip}>메인 페이지로 이동</span>
           </button>
         </Link>
       </div>
@@ -77,6 +80,7 @@ export default function Header({ url }: HeaderProps) {
           height={30}
           alt="드롭다운 버튼"
         />
+        <span className={styles.tooltip}>메뉴 열기</span>
       </button>
       {isDropdownOpen && <Dropdown onClose={toggleDropdown} />}
     </div>
