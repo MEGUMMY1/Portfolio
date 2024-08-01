@@ -1,5 +1,17 @@
 @import '@/styles/mixin.scss';
 
+@keyframes blink {
+  0% {
+    box-shadow: 0 0 0 rgb(255, 234, 0);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 rgb(255, 234, 0);
+  }
+}
+
 .container {
   position: absolute;
   top: 0;
@@ -63,6 +75,11 @@
   border: none;
   @include flex-center;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.animation {
+  animation: blink 1.5s infinite;
 }
 
 .search_bar {

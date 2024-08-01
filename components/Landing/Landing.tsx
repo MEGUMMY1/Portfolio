@@ -6,36 +6,16 @@ export default function Landing() {
   return (
     <div className={styles.container}>
       <div className={styles.buttons}>
+        <MenuButton color="#b6a999" title="About me" href="/about-me" />
+        <MenuButton color="#7d7986" title="Education" href="/education" />
         <MenuButton
-          image="/image/AboutMe.svg"
-          title="About me"
-          href="/about-me"
-        />
-        <MenuButton
-          image="/image/Education.svg"
-          title="Education"
-          href="/education"
-        />
-        <MenuButton
-          image="/image/Certificate.svg"
+          color="#067c61"
           title="Certifications"
           href="/certifications"
         />
-        <MenuButton
-          image="/image/SkillnTools.svg"
-          title="Skills&Tools"
-          href="/skills-tools"
-        />
-        <MenuButton
-          image="/image/Activities.svg"
-          title="Activities"
-          href="/activities"
-        />
-        <MenuButton
-          image="/image/Projects.svg"
-          title="Projects"
-          href="/projects"
-        />
+        <MenuButton color="#232323" title="Skills&Tools" href="/skills-tools" />
+        <MenuButton color="#0081a7" title="Activities" href="/activities" />
+        <MenuButton color="#eb7262" title="Projects" href="/projects" />
       </div>
     </div>
   );

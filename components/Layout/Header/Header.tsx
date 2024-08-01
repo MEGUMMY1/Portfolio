@@ -5,14 +5,18 @@ import { HeaderProps } from './Header.types';
 import Dropdown from '../Dropdown/Dropdown';
 import Link from 'next/link';
 import usePageNavigation from '@/hooks/usePageNavigation';
+import { useRouter } from 'next/router';
 
 export default function Header({ url }: HeaderProps) {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const { goToNextPage, goToPreviousPage } = usePageNavigation();
+  const router = useRouter();
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
+
+  const isHomePage = router.pathname === '/';
 
   return (
     <div className={styles.container}>
@@ -30,7 +34,12 @@ export default function Header({ url }: HeaderProps) {
             alt="왼쪽 화살표"
           />
         </button>
-        <button className={styles.button_bg} onClick={goToNextPage}>
+        <button
+          className={`${styles.button_bg} ${
+            isHomePage ? styles.animation : ''
+          }`}
+          onClick={goToNextPage}
+        >
           <Image
             src="/icon/right_arrow.svg"
             width={40}
@@ -58,7 +67,10 @@ export default function Header({ url }: HeaderProps) {
         />
         <p className={styles.url_text}>{url}</p>
       </div>
-      <button className={styles.button_bg} onClick={toggleDropdown}>
+      <button
+        className={`${styles.button_bg} ${isHomePage ? styles.animation : ''}`}
+        onClick={toggleDropdown}
+      >
         <Image
           src="/icon/hamburger.svg"
           width={30}

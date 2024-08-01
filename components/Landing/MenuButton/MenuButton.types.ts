@@ -1,5 +1,5 @@
 export interface MenuButtonProps {
-  image: string;
+  color: string;
   title: string;
   href: string;
 }
