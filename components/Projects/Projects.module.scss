@@ -44,6 +44,7 @@
   height: 70%;
 
   @media (max-width: $Mobile) {
+    width: 90%;
     margin-top: 0;
     margin-bottom: 10%;
     grid-template-columns: repeat(1, 1fr);

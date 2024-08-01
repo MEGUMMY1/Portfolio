@@ -18,6 +18,7 @@
   }
 
   @media (max-width: $Mobile) {
+    width: 100%;
     height: auto;
     min-height: 20rem;
   }
@@ -62,7 +63,6 @@
   font-size: 16px;
   color: #373737;
   margin: 10px 0;
-  letter-spacing: -0.5px;
 }
 
 .links {
