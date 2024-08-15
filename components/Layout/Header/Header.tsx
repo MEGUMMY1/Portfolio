@@ -71,7 +71,9 @@ export default function Header({ url }: HeaderProps) {
         <p className={styles.url_text}>{url}</p>
       </div>
       <button
-        className={`${styles.button_bg} ${isHomePage ? styles.animation : ''}`}
+        className={`${styles.button_bg} ${isHomePage ? styles.animation : ''} ${
+          styles.hambuger
+        }`}
         onClick={toggleDropdown}
       >
         <Image
