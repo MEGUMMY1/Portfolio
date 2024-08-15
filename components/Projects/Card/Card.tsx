@@ -11,9 +11,10 @@ export default function Card({
   github,
   link,
   figma,
+  onClick,
 }: CardProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={onClick}>
       <div className={styles.image_container}>
         <Image
           src={image}

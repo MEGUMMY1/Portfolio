@@ -1,6 +1,7 @@
 [
   {
-    "title": "포트폴리오",
+    "id": 1,
+    "title": "Portfolio",
     "description": "저의 기술로 저를 소개하기 위해 제작한 포트폴리오 사이트입니다.",
     "image": "/image/portfolio.png",
     "github": "https://github.com/MEGUMMY1/Portfolio_next",
@@ -8,6 +9,7 @@
     "figma": "https://www.figma.com/design/zSqL8InCfm5Az6gZFHBt7a/portfolio?node-id=0-1&t=i3qFNhgZDzTB7Aft-1"
   },
   {
+    "id": 2,
     "title": "GlobalNomad",
     "description": "사람들이 여행을 갈 때, 가서 뭘 할지, 비용은 얼마인지 등 고민을 줄여주기 위해 체험을 간단하게 예약할 수 있는 서비스입니다.",
     "image": "/image/globalnomad.png",
@@ -16,6 +18,7 @@
     "figma": "https://www.figma.com/design/jAxjIOvOWeiivoq4rFgldd/8%ED%8C%80-GlobalNomad?node-id=0-1&t=kUvqhbb1XGNxYeVH-0"
   },
   {
+    "id": 3,
     "title": "더 줄게",
     "description": "급하게 일손이 필요한 자리에 더 많은 시급을 제공해서 아르바이트생을 구할 수 있는 서비스입니다.",
     "image": "/image/thejulge.png",
@@ -24,6 +27,7 @@
     "figma": "https://www.figma.com/design/0CGcdwHRtifX9VhCg9NWxB/part3-5%ED%8C%80-the-julge?node-id=0-1&t=1B1afGjXN1txhR8o-0"
   },
   {
+    "id": 4,
     "title": "Rolling",
     "description": "롤링 서비스는 감사와 축하, 응원의 메시지 등을 온라인으로 보낼 수 있는 플랫폼입니다.",
     "image": "/image/rolling.png",
@@ -32,6 +36,7 @@
     "figma": "https://www.figma.com/design/SymJwabqGlCwLZh3uK9hg0/AAA---%E1%84%85%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%86%BC-(Copy)?node-id=0-1&t=BeqXi7MHW3tHtQa6-0"
   },
   {
+    "id": 5,
     "title": "교내 총대의원회 투표 시스템",
     "description": "교내 총대의원회 회의 시 인증 및 투표 과정의 어려움을 발견하여 기획 후 구현한 서비스입니다.",
     "image": "/image/vote.png",
@@ -39,6 +44,7 @@
     "figma": "https://www.figma.com/design/2edWOxmSS3r4w11PE0TwpR/%EC%B4%9D%EB%8C%80%EC%9D%98%EC%9B%90%ED%9A%8C-%ED%88%AC%ED%91%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=0-1&t=T6CjkdSzOfmDyVUf-1"
   },
   {
+    "id": 6,
     "title": "Veganism",
     "description": "[졸업작품] 비건 레시피 추천 및 공유 웹 서비스입니다.",
     "image": "/image/veganism.png",

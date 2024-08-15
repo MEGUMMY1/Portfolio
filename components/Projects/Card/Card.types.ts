@@ -5,4 +5,5 @@ export interface CardProps {
   github?: string;
   link?: string;
   figma?: string;
+  onClick?: () => void;
 }
