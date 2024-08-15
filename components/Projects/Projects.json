@@ -39,12 +39,6 @@
     "figma": "https://www.figma.com/design/2edWOxmSS3r4w11PE0TwpR/%EC%B4%9D%EB%8C%80%EC%9D%98%EC%9B%90%ED%9A%8C-%ED%88%AC%ED%91%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C?node-id=0-1&t=T6CjkdSzOfmDyVUf-1"
   },
   {
-    "title": "디지털 친화력 테스트",
-    "description": "무박2일 디지털 격차 완화 해커톤에서 구현한 디지털 친화력 테스트입니다.",
-    "image": "/image/digitaltest.png",
-    "github": "https://github.com/MEGUMMY1/digital-level-test"
-  },
-  {
     "title": "Veganism",
     "description": "[졸업작품] 비건 레시피 추천 및 공유 웹 서비스입니다.",
     "image": "/image/veganism.png",

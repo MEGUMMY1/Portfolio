@@ -7,34 +7,40 @@ import usePageNavigation from '@/hooks/usePageNavigation';
 import { debounce } from '@/utils/debounce';
 
 export default function Layout({ children, url }: LayoutProps) {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
   const { goToNextPage, goToPreviousPage } = usePageNavigation();
 
   useKeyPress('ArrowRight', goToNextPage);
   useKeyPress('ArrowLeft', goToPreviousPage);
 
-  const handleResize = debounce(() => {
-    setWindowWidth(window.innerWidth);
-  }, 200);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+
+      const handleResize = debounce(() => {
+        setWindowWidth(window.innerWidth);
+      }, 200);
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
 
   const handleClick = (event: React.MouseEvent) => {
-    const container = document.querySelector(`.${styles.window_container}`);
-    if (container && !container.contains(event.target as Node)) {
-      if (event.clientX > windowWidth / 2) {
-        goToNextPage();
-      } else {
-        goToPreviousPage();
+    if (windowWidth !== null) {
+      const container = document.querySelector(`.${styles.window_container}`);
+      if (container && !container.contains(event.target as Node)) {
+        if (event.clientX > windowWidth / 2) {
+          goToNextPage();
+        } else {
+          goToPreviousPage();
+        }
       }
     }
   };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [handleResize]);
 
   return (
     <div className={styles.container} onClick={handleClick}>
