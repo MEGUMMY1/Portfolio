@@ -105,6 +105,7 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
           </ul>
           {projectDetail.details.troubleshooting && (
             <>
+              <div className={styles.bar} />
               <h3 className={styles.subheading}>TroubleShooting</h3>
               <p className={styles.description}>
                 {formatText(projectDetail.details.troubleshooting)}
