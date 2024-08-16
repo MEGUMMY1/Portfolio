@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import styles from './Projects.module.scss';
 import projects from './Projects.json';
 import details from './Details.json';
@@ -48,13 +49,24 @@ export default function Projects() {
             title={project.title}
             description={project.description}
             image={project.image}
+            github={project.github}
+            link={project.link}
+            figma={project.figma}
             onClick={() => openProjectDetail(project)}
           />
         ))}
       </div>
       {projectDetail && (
-        <div className={styles.projectDetailContainer}>
-          <button onClick={closeProjectDetail}>Close</button>
+        <div className={styles.project_detail_container}>
+          <Image
+            src="/icon/close.svg"
+            width={30}
+            height={30}
+            alt="close button"
+            tabIndex={0}
+            className={styles.close_button}
+            onClick={closeProjectDetail}
+          />
           <ProjectDetail projectDetail={projectDetail} />
         </div>
       )}

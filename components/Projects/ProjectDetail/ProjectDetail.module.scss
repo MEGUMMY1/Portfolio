@@ -1,60 +1,134 @@
-.project_detail {
-  padding: 20px;
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 4.5rem 1rem 1rem 2rem;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.title {
-  font-size: 24px;
-  margin-bottom: 16px;
-  color: #333;
+.project_detail {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 30px;
 }
 
-.service_description {
+.project_detail::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project_detail::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.project_detail::-webkit-scrollbar-thumb {
+  background: #eb7262;
+  border-radius: 10px;
+}
+
+.project_detail::-webkit-scrollbar-thumb:hover {
+  background: #eb7262;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #eb7262;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+}
+
+.description {
   font-size: 18px;
+  margin-left: 5px;
   margin-bottom: 24px;
-  line-height: 1.6;
-  color: #555;
+  line-height: 1.2;
+  color: #2e1b1c;
 }
 
 .subheading {
   font-size: 20px;
+  font-weight: 700;
   margin-bottom: 12px;
-  color: #444;
+  color: #56423e;
+}
+
+.message {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.bar {
+  border: 1px dashed #dcdcdc;
+  margin: 1rem 0;
 }
 
 .list {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-bottom: 24px;
-}
-
-.list_item {
-  margin-bottom: 8px;
-}
-
-.troubleshooting {
-  margin-bottom: 24px;
-  color: #888;
-}
-
-.project_images {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.tech_button {
+  width: auto;
+  height: 2rem;
+  padding: 5px 10px;
+  background-color: #f3eed9;
+  color: #eb7262;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e4d8a6;
+  }
+}
+
+.singleImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
 }
 
 .image {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  border-radius: 15px;
 }
 
-.placeholder {
-  font-size: 18px;
-  color: #999;
-  text-align: center;
-  padding: 40px;
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreenSlider {
+  width: 80%;
+  height: 80%;
+}
+
+.fullscreenImageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreenImage {
+  object-fit: contain;
 }
