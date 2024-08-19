@@ -6,6 +6,7 @@ import Container from './Container/Container';
 
 export default function SkillsTools() {
   const skills = useRecoilValue(skillsState);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Skills&Tools</h1>

@@ -46,7 +46,7 @@ export default function Layout({ children, url }: LayoutProps) {
     <div className={styles.container} onClick={handleClick}>
       <div className={styles.window_container}>
         <Header url={url} />
-        {children}
+        <div className={styles.children}>{children}</div>
       </div>
     </div>
   );
