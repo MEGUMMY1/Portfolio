@@ -5,6 +5,7 @@ import styles from './ProjectDetail.module.scss';
 import { ProjectDetailProps } from './ProjectDetail.types';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { NextArrow, PrevArrow } from '../ArrowButton/ArrowButton';
 
 export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -16,6 +17,8 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   const handleImageClick = () => {

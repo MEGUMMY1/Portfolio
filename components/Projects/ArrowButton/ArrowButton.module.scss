@@ -1,0 +1,25 @@
+.arrow_prev {
+  position: absolute;
+  top: 50%;
+  left: -55px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow_prev:hover {
+  opacity: 0.8;
+}
+
+.arrow_next {
+  position: absolute;
+  top: 50%;
+  right: -55px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow_next:hover {
+  opacity: 0.8;
+}
