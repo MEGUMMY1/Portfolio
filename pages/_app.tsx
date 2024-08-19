@@ -11,6 +11,23 @@ import { RecoilRoot } from 'recoil';
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const router = useRouter();
+  const { pathname } = router;
+
+  useEffect(() => {
+    const validPaths = [
+      '/',
+      '/about-me',
+      '/activities',
+      '/certifications',
+      '/education',
+      '/projects',
+      '/skills-tools',
+    ];
+
+    if (!validPaths.includes(pathname)) {
+      router.replace('/');
+    }
+  }, [pathname, router]);
 
   useEffect(() => {
     const handleStart = () => setIsLoading(true);

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const EMAIL_ADDRESS = 'cys10902@naver.com';
+const EMAIL_ADDRESS = 'cys10902@gmail.com';
 
 export default function Dropdown({ onClose }: { onClose: () => void }) {
   const dropdownRef = useClickOutside<HTMLDivElement>(() => {
