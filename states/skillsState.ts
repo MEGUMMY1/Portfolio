@@ -19,13 +19,6 @@ export const skillsState = atom({
       ],
     },
     {
-      title: 'Deployment & Hosting',
-      icon: [
-        { image: '/icon/skills/netlify.svg', title: 'Netlify' },
-        { image: '/icon/skills/vercel.svg', title: 'Vercel' },
-      ],
-    },
-    {
       title: 'Design Tools',
       icon: [
         { image: '/icon/skills/photoshop.svg', title: 'Photoshop' },
