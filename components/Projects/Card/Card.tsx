@@ -14,8 +14,8 @@ export default function Card({
   onClick,
 }: CardProps) {
   return (
-    <div className={styles.container} onClick={onClick}>
-      <div className={styles.image_container}>
+    <div className={styles.container}>
+      <div className={styles.image_container} onClick={onClick}>
         <Image
           src={image}
           alt={title}
@@ -25,7 +25,7 @@ export default function Card({
         />
       </div>
       <div className={styles.content}>
-        <div>
+        <div onClick={onClick}>
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.description}>{description}</p>
         </div>
