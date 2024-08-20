@@ -13,8 +13,14 @@ export default function Card({
   figma,
   onClick,
 }: CardProps) {
+  const handleEnterKey = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Enter') {
+      onClick?.();
+    }
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} tabIndex={0} onKeyDown={handleEnterKey}>
       <div className={styles.image_container} onClick={onClick}>
         <Image
           src={image}
@@ -25,7 +31,7 @@ export default function Card({
         />
       </div>
       <div className={styles.content}>
-        <div onClick={onClick}>
+        <div onClick={onClick} tabIndex={0} onKeyDown={handleEnterKey}>
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.description}>{description}</p>
         </div>

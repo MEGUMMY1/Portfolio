@@ -48,7 +48,6 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
       <div className={styles.container}>
         <div className={styles.project_detail}>
           <h2 className={styles.title}>{projectDetail.title}</h2>
-
           {isMobile ? (
             // 모바일: 이미지 슬라이드
             <>
@@ -97,7 +96,6 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
               </p>
             </>
           )}
-
           {isFullscreen && (
             <div
               className={styles.fullscreen_overlay}
