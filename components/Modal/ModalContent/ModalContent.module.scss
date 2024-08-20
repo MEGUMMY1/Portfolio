@@ -77,3 +77,14 @@
   gap: 20px;
   flex-direction: column;
 }
+
+.item {
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+  }
+}

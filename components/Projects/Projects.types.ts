@@ -4,9 +4,9 @@ export interface ProjectDetail {
   description: string;
   details: {
     serviceDescription: string;
-    features: string;
+    features: string[];
     technologies: string[];
-    contributions: string;
+    contributions: string[];
     troubleshooting?: string;
     images: string[];
   };

@@ -1,3 +1,5 @@
+@import '@/styles/mixin.scss';
+
 .container {
   width: 100%;
   height: 100%;
@@ -5,6 +7,10 @@
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $Mobile) {
+    padding: 5rem 0.5rem 1rem 1rem;
+  }
 }
 
 .project_detail {
@@ -13,6 +19,11 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 4rem;
+
+  @media (max-width: $Mobile) {
+    padding-left: 5px;
+    padding-right: 10px;
+  }
 }
 
 .project_detail::-webkit-scrollbar {
@@ -40,14 +51,58 @@
   position: absolute;
   top: 2rem;
   left: 3rem;
+
+  @media (max-width: $Mobile) {
+    font-size: 2rem;
+    left: 2rem;
+    width: 60%;
+  }
 }
 
 .description {
   font-size: 18px;
   margin-left: 5px;
   margin-bottom: 24px;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #2e1b1c;
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    content: '＞';
+    position: absolute;
+    left: 0;
+  }
+
+  @media (max-width: $Mobile) {
+    padding-left: 0;
+
+    &::before {
+      content: '';
+    }
+  }
+}
+
+.issue_description {
+  font-size: 18px;
+  margin-left: 5px;
+  margin-bottom: 24px;
+  line-height: 1.3;
+  color: #2e1b1c;
+}
+
+.item_list {
+  list-style-image: url('/icon/check.svg');
+  margin-left: 5px;
+  padding-left: 20px;
+  display: block;
+  justify-content: center;
+}
+
+.item {
+  line-height: 1.5;
+  font-size: 16px;
+  display: list-item;
 }
 
 .subheading {
@@ -71,9 +126,11 @@
 
 .list {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
   margin-left: 5px;
+  width: 100%;
 }
 
 .tech_button {
@@ -93,42 +150,46 @@
   }
 }
 
-.singleImageWrapper {
+.single_image_wrapper {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 200px;
   cursor: pointer;
 }
 
 .image {
   object-fit: contain;
-  border-radius: 15px;
 }
 
-.fullscreenOverlay {
+.fullscreen_overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.368);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-.fullscreenSlider {
+.fullscreen_slider {
   width: 80%;
   height: 80%;
 }
 
-.fullscreenImageContainer {
+.fullscreen_image_container {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.fullscreenImage {
+.fullscreen_image {
   object-fit: contain;
+}
+
+.single_image_slider {
+  margin-top: 10px;
+  margin-bottom: 2rem;
 }

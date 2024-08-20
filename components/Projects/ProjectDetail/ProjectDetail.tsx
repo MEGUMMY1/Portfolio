@@ -6,6 +6,7 @@ import { ProjectDetailProps } from './ProjectDetail.types';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { NextArrow, PrevArrow } from '../ArrowButton/ArrowButton';
+import useIsMobile from '@/hooks/useIsMobile';
 
 export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -16,7 +17,7 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
     speed: 200,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: !useIsMobile(),
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
@@ -46,26 +47,19 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
       <div className={styles.container}>
         <div className={styles.project_detail}>
           <h2 className={styles.title}>{projectDetail.title}</h2>
-          <div className={styles.singleImageWrapper} onClick={handleImageClick}>
-            <Image
-              src={projectDetail.details.images[0]}
-              alt="Project image"
-              layout="fill"
-              objectFit="contain"
-              className={styles.image}
-            />
-          </div>
-          <p className={styles.message}>
-            위 이미지를 클릭하면 프로젝트 상세 이미지 슬라이드가 열립니다.
-          </p>
-          {isFullscreen && (
-            <div
-              className={styles.fullscreenOverlay}
-              onClick={handleCloseFullscreen}
-            >
-              <Slider {...sliderSettings} className={styles.fullscreenSlider}>
+
+          {useIsMobile() ? (
+            // 모바일: 이미지 슬라이드
+            <>
+              <Slider
+                {...sliderSettings}
+                className={styles.single_image_slider}
+              >
                 {projectDetail.details.images.map((image, index) => (
-                  <div key={index} className={styles.fullscreenImageContainer}>
+                  <div
+                    key={index}
+                    className={styles.fullscreen_image_container}
+                  >
                     <Image
                       src={image}
                       alt={`Screenshot ${index + 1}`}
@@ -73,7 +67,55 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
                       width={1920}
                       height={1080}
                       objectFit="contain"
-                      className={styles.fullscreenImage}
+                      className={styles.image}
+                    />
+                  </div>
+                ))}
+              </Slider>
+              <p className={styles.message}>
+                이미지를 좌우로 움직이면 다음 이미지가 보입니다.
+              </p>
+            </>
+          ) : (
+            // PC: 이미지 클릭하여 전체 화면 이미지 슬라이드
+            <>
+              <div
+                className={styles.single_image_wrapper}
+                onClick={handleImageClick}
+              >
+                <Image
+                  src={projectDetail.details.images[0]}
+                  alt="Project image"
+                  layout="fill"
+                  objectFit="contain"
+                  className={styles.image}
+                />
+              </div>
+              <p className={styles.message}>
+                위 이미지를 클릭하면 프로젝트 상세 이미지 슬라이드가 열립니다.
+              </p>
+            </>
+          )}
+
+          {isFullscreen && (
+            <div
+              className={styles.fullscreen_overlay}
+              onClick={handleCloseFullscreen}
+            >
+              <Slider {...sliderSettings} className={styles.fullscreen_slider}>
+                {projectDetail.details.images.map((image, index) => (
+                  <div
+                    key={index}
+                    className={styles.fullscreen_image_container}
+                  >
+                    <Image
+                      src={image}
+                      alt={`Screenshot ${index + 1}`}
+                      layout="responsive"
+                      width={1920}
+                      height={1080}
+                      objectFit="contain"
+                      className={styles.fullscreen_image}
                     />
                   </div>
                 ))}
@@ -81,13 +123,17 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
             </div>
           )}
           <p className={styles.description}>
-            ＞ {formatText(projectDetail.details.serviceDescription)}
+            {formatText(projectDetail.details.serviceDescription)}
           </p>
           <div className={styles.bar} />
           <h3 className={styles.subheading}>주요 기능 및 특징</h3>
-          <p className={styles.description}>
-            {formatText(projectDetail.details.features)}
-          </p>
+          <ul className={styles.item_list}>
+            {projectDetail.details.features.map((feature, index) => (
+              <li key={index} className={styles.item}>
+                {feature}
+              </li>
+            ))}
+          </ul>
           <div className={styles.bar} />
           <h3 className={styles.subheading}>사용 기술 및 언어</h3>
           <div className={styles.list}>
@@ -99,18 +145,18 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
           </div>
           <div className={styles.bar} />
           <h3 className={styles.subheading}>기여한 작업</h3>
-          <ul className={styles.description}>
-            {projectDetail.details.contributions
-              .split('/ ')
-              .map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
+          <ul className={styles.item_list}>
+            {projectDetail.details.contributions.map((item, index) => (
+              <li key={index} className={styles.item}>
+                {item}
+              </li>
+            ))}
           </ul>
           {projectDetail.details.troubleshooting && (
             <>
               <div className={styles.bar} />
               <h3 className={styles.subheading}>TroubleShooting</h3>
-              <p className={styles.description}>
+              <p className={styles.issue_description}>
                 {formatText(projectDetail.details.troubleshooting)}
               </p>
             </>
