@@ -10,6 +10,7 @@ import useIsMobile from '@/hooks/useIsMobile';
 
 export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const isMobile = useIsMobile();
 
   const sliderSettings = {
     dots: true,
@@ -17,7 +18,7 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
     speed: 200,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: !useIsMobile(),
+    arrows: !isMobile,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
@@ -48,7 +49,7 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
         <div className={styles.project_detail}>
           <h2 className={styles.title}>{projectDetail.title}</h2>
 
-          {useIsMobile() ? (
+          {isMobile ? (
             // 모바일: 이미지 슬라이드
             <>
               <Slider
