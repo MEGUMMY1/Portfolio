@@ -40,3 +40,9 @@
 <br/> 
 
 ## 3. 시연
+![2024-08-22175249-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e013b604-eae4-4b6f-96d9-b5a1aaed7d1d)
+![2024-08-22175249-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/19f309b7-9b51-4bae-85ac-8e72567afeca)
+![2024-08-22175249-ezgif com-video-to-gif-converter (2)](https://github.com/user-attachments/assets/a23f24ef-be12-4969-a71e-a10386a6e4fe)
+![2024-08-22175249-ezgif com-video-to-gif-converter (3)](https://github.com/user-attachments/assets/60017043-7861-4a96-87a3-5754c5e4fa72)
+
+
