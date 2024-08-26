@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import styles from './ProjectDetail.module.scss';
@@ -11,6 +11,7 @@ import useIsMobile from '@/hooks/useIsMobile';
 export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const isMobile = useIsMobile();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const sliderSettings = {
     dots: true,
@@ -43,9 +44,31 @@ export default function ProjectDetail({ projectDetail }: ProjectDetailProps) {
     ));
   };
 
+  // 방향키로 스크롤 제어 및 Esc 키로 슬라이더 닫기
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (containerRef.current) {
+        const { current } = containerRef;
+
+        if (event.key === 'ArrowDown') {
+          current.scrollBy({ top: 100, behavior: 'smooth' });
+        } else if (event.key === 'ArrowUp') {
+          current.scrollBy({ top: -100, behavior: 'smooth' });
+        } else if (event.key === 'Escape') {
+          setIsFullscreen(false);
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
     projectDetail && (
-      <div className={styles.container}>
+      <div className={styles.container} ref={containerRef}>
         <div className={styles.project_detail}>
           <h2 className={styles.title}>{projectDetail.title}</h2>
           {isMobile ? (

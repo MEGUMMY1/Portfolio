@@ -33,7 +33,7 @@ export default function Dropdown({ onClose }: { onClose: () => void }) {
         draggable
         pauseOnHover
       />
-      <Link href="https://github.com/MEGUMMY1" passHref>
+      <Link href="https://github.com/MEGUMMY1" target="_blank">
         <div className={`${styles.dropdown_button} ${styles.first_button}`}>
           <Image
             src="/icon/github.svg"
@@ -44,7 +44,7 @@ export default function Dropdown({ onClose }: { onClose: () => void }) {
           Github
         </div>
       </Link>
-      <Link href="https://velog.io/@megummy1" passHref>
+      <Link href="https://velog.io/@megummy1" target="_blank">
         <div className={styles.dropdown_button}>
           <Image
             src="/icon/blog.svg"

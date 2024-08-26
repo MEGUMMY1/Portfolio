@@ -39,10 +39,24 @@ export default function Projects() {
     setProjectDetail(null);
   };
 
+  // Enter 키로 ProjectDetail 창을 닫는 함수
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Enter' && projectDetail) {
+        closeProjectDetail();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [projectDetail]);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Projects</h1>
-      <div className={styles.card_container}>
+      <div className={styles.card_container} tabIndex={0}>
         {projects.map((project, index) => (
           <Card
             key={index}
@@ -66,6 +80,9 @@ export default function Projects() {
             tabIndex={0}
             className={styles.close_button}
             onClick={closeProjectDetail}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') closeProjectDetail();
+            }}
           />
           <ProjectDetail projectDetail={projectDetail} />
         </div>

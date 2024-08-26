@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './SkillsTools.module.scss';
 import { skillsState } from '@/states/skillsState';
 import { useRecoilValue } from 'recoil';
