@@ -29,21 +29,8 @@ export default function Layout({ children, url }: LayoutProps) {
     }
   }, []);
 
-  const handleClick = (event: React.MouseEvent) => {
-    if (windowWidth !== null) {
-      const container = document.querySelector(`.${styles.window_container}`);
-      if (container && !container.contains(event.target as Node)) {
-        if (event.clientX > windowWidth / 2) {
-          goToNextPage();
-        } else {
-          goToPreviousPage();
-        }
-      }
-    }
-  };
-
   return (
-    <div className={styles.container} onClick={handleClick}>
+    <div className={styles.container}>
       <div className={styles.window_container}>
         <Header url={url} />
         <div className={styles.children}>{children}</div>
