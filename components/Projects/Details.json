@@ -56,7 +56,7 @@
         "투표 화면은 직관적인 UI를 강조하여 회의 시 투표에만 집중할 수 있도록 설계했습니다.",
         "발표 자료와 함께 사용할 admin용 서비스는 PC 화면에 최적화했으며, 안건을 출력하고 단과대학별로 나뉜 투표 결과를 실시간으로 보여줄 수 있도록 구현했습니다."
       ],
-      "technologies": ["React", "Axios", "CSS", "Git"],
+      "technologies": ["React", "CSS"],
       "contributions": [
         "기획",
         "디자인",
@@ -81,7 +81,7 @@
         "사용자는 롤링페이퍼를 받을 사람의 페이지를 생성하고, 페이지 내에서 카드를 추가하여 메시지를 작성할 수 있습니다.",
         "메시지 작성 시 프로필 이미지와 폰트를 선택할 수 있으며, 이를 위해 React-Quill 에디터를 활용하였습니다."
       ],
-      "technologies": ["React", "JavaScript", "SCSS", "Git"],
+      "technologies": ["React", "JavaScript", "SCSS"],
       "contributions": [
         "PM",
         "롤링페이퍼 메시지 작성 Form 화면(Input, ProfileImage, Dropdown, Editor, CancelBtn, CreateBtn 컴포넌트)",
@@ -109,15 +109,7 @@
         "공고를 다양한 조건으로 필터링할 수 있는 기능을 통해 사용자는 원하는 조건에 맞는 공고를 쉽게 찾을 수 있습니다.",
         "최근에 본 공고는 클릭한 공고를 추적하여 사용자가 나중에 다시 확인할 수 있도록 구현되었습니다."
       ],
-      "technologies": [
-        "Nextjs",
-        "React",
-        "TypeScript",
-        "Axios",
-        "Recoil",
-        "SCSS",
-        "Git"
-      ],
+      "technologies": ["Nextjs", "React", "TypeScript", "Recoil", "SCSS"],
       "contributions": [
         "컴포넌트(페이지네이션, 공고 컴포넌트, 시급 인상 비율 버튼)",
         "화면(공고 리스트(메인), 지역 맞춤 공고, 가게 정보 상세, 가게 정보 등록 · 수정)",
@@ -162,10 +154,8 @@
         "React",
         "TypeScript",
         "Recoil",
-        "React-Query",
-        "Axios",
-        "Tailwind CSS",
-        "Git"
+        "TanStack-Query",
+        "Tailwind CSS"
       ],
       "contributions": [
         "컴포넌트 개발(Modal, Popup, Pagination, Footer 컴포넌트)",
@@ -207,14 +197,7 @@
         "사이트 전체에 애니메이션, hover 효과, tooltip 등을 추가하여 시각적 재미를 더했으며, 스크롤은 디자인에 맞게 커스터마이즈했습니다.",
         "반응형 디자인을 적용하여 모바일과 다양한 화면 크기에서도 원활하게 이용할 수 있도록 하였습니다."
       ],
-      "technologies": [
-        "Nextjs",
-        "React",
-        "TypeScript",
-        "Recoil",
-        "SCSS",
-        "Git"
-      ],
+      "technologies": ["Nextjs", "React", "TypeScript", "Recoil", "SCSS"],
       "contributions": [
         "기획, 디자인, 구현 전반에 걸쳐 모든 작업에 기여했습니다."
       ],
