@@ -46,11 +46,13 @@ export default function Activities() {
           >
             <div className={styles.activity_div}>
               <h3 className={styles.activity_name}>{activity.activity_name}</h3>
-              <p className={styles.activity_period}>{activity.period}</p>
+              <p className={styles.activity_description}>
+                {activity.description}
+              </p>
             </div>
-            <p className={styles.activity_description}>
-              {activity.description}
-            </p>
+
+            <p className={styles.activity_period}>{activity.period}</p>
+            <p className={styles.activity_detail}>{activity.detail}</p>
           </motion.div>
         ))}
       </motion.div>
