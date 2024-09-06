@@ -154,7 +154,7 @@
         "React",
         "TypeScript",
         "Recoil",
-        "TanStack-Query",
+        "React-Query",
         "Tailwind CSS"
       ],
       "contributions": [
