@@ -9,19 +9,11 @@
 }
 
 @font-face {
-  font-family: 'BlackHanSans';
+  font-family: 'RixYeoljeongdo_Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/zess/BlackHanSans.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/zess/BlackHanSans.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/zess/BlackHanSans.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/zess/BlackHanSans.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/zess/BlackHanSans.ttf')
-      format('truetype');
-  font-display: swap;
 }
 
 * {
