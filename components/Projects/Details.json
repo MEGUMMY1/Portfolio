@@ -220,7 +220,7 @@
     "title": "지뢰찾기 게임",
     "description": "웹에서도 지뢰찾기 게임을 할 수 있도록 구현한 서비스입니다.",
     "details": {
-      "serviceDescription": "웹에서도 지뢰찾기 게임을 할 수 있도록 구현한 서비스입니다. \n기존 서비스(http://freeminesweeper.org/minecore.html)를 참고하여 구현했습니다.",
+      "serviceDescription": "웹에서도 지뢰찾기 게임을 할 수 있도록 구현한 서비스입니다. \n기존 서비스(https://freeminesweeper.org)를 참고하여 구현했습니다.",
       "features": [
         "첫 번째 빈칸을 열었을 때 지뢰가 터지지 않도록 구현했습니다.",
         "게임 타이머를 추가하여 성취감을 높였습니다.",
