@@ -16,6 +16,7 @@ export const skillsState = atom({
         { image: '/icon/skills/nextjs.svg', title: 'Next.js' },
         { image: '/icon/skills/reactquery.svg', title: 'React-Query' },
         { image: '/icon/skills/recoil.svg', title: 'Recoil' },
+        { image: '/icon/skills/redux.svg', title: 'Redux' },
       ],
     },
     {
