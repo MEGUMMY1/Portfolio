@@ -6,3 +6,5 @@ export const pages = [
   '/activities',
   '/projects',
 ];
+
+export const serviceURL = 'https://chohyejean.netlify.app/';
