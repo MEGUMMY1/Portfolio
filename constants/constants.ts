@@ -7,4 +7,4 @@ export const pages = [
   '/projects',
 ];
 
-export const serviceURL = 'https://chohyejean.netlify.app/';
+export const serviceURL = 'http://chohyejean.site/';

@@ -49,7 +49,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {isLoading ? (
           <Spinner />
         ) : (
-          <Layout url={`https://chohyejean.co.kr${router.asPath}`}>
+          <Layout url={`http://chohyejean.site${router.asPath}`}>
             <Component {...pageProps} />
             <Modal />
           </Layout>
