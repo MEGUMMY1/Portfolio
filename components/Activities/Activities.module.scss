@@ -27,6 +27,7 @@
   flex-shrink: 0;
   margin-top: 2rem;
   align-self: baseline;
+  @include drag-none;
 
   @media (max-width: $Mobile) {
     margin: 30px 0;

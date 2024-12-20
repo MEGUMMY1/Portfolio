@@ -4,4 +4,11 @@
   justify-content: center;
 }
 
+@mixin drag-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 $Mobile: 767px;

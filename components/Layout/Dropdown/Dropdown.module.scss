@@ -33,6 +33,7 @@
   color: #000;
   background: none;
   text-decoration: none;
+  @include drag-none;
 
   &:hover {
     background-color: #ededed;

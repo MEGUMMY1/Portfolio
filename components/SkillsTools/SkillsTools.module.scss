@@ -23,6 +23,7 @@
   color: var(--white);
   flex-shrink: 0;
   margin-top: 2rem;
+  @include drag-none;
 
   @media (max-width: $Mobile) {
     margin: 30px 0;
@@ -41,6 +42,7 @@
   align-items: center;
   overflow-y: auto;
   margin-bottom: 1rem;
+  @include drag-none;
 
   @media (max-width: $Mobile) {
     justify-content: flex-start;

@@ -24,6 +24,7 @@
   font-size: 64px;
   font-family: RixYeoljeongdo_Regular;
   color: var(--white);
+  @include drag-none;
 
   @media (max-width: $Mobile) {
     margin: 30px 0;
@@ -37,6 +38,7 @@
   display: flex;
   gap: 30px;
   justify-content: space-between;
+  @include drag-none;
 
   @media (max-width: $Mobile) {
     display: grid;

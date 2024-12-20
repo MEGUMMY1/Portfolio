@@ -26,6 +26,7 @@
   font-size: 64px;
   font-family: RixYeoljeongdo_Regular;
   color: var(--gray50);
+  @include drag-none;
 
   @media (max-width: $Mobile) {
     margin-top: 30px;
@@ -60,6 +61,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  @include drag-none;
 
   &:hover {
     transform: scale(1.05);
