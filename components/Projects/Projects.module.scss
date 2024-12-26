@@ -36,14 +36,14 @@
 }
 
 .card_container {
-  margin-top: 10%;
+  margin-top: 5rem;
   padding-right: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   overflow-y: auto;
   justify-content: center;
-  height: 70%;
+  height: 75%;
 
   @media (max-width: $Mobile) {
     width: 90%;
