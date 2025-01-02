@@ -1,5 +1,13 @@
 [
   {
+    "id": 9,
+    "title": "CHESSMONG",
+    "description": "체스 초보자들을 위한 체스 오프닝 강의 검색 사이트입니다.",
+    "image": "/image/chessmong.png",
+    "github": "https://github.com/chessmong/FE_Chessmong_user",
+    "link": "https://chessmong.com/"
+  },
+  {
     "id": 8,
     "title": "HelloFit",
     "description": "공공데이터 활용 공모전에 제출한 지도 기반 스포츠 강좌 정보 제공 서비스입니다.",
