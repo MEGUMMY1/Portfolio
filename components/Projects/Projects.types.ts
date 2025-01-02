@@ -1,7 +1,6 @@
 export interface ProjectDetail {
   id: number;
   title: string;
-  description: string;
   details: {
     serviceDescription: string;
     features: string[];
