@@ -1,11 +1,11 @@
 import Layout from '@/components/Layout/Layout';
 import Modal from '@/components/Modal/Modal';
-import Spinner from '@/components/Spinner/Spinner';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { RecoilRoot } from 'recoil';
+import Loader from '@/components/Loader/Loader';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -47,7 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <RecoilRoot>
         {isLoading ? (
-          <Spinner />
+          <Loader />
         ) : (
           <Layout url={`http://chohyejean.site${router.asPath}`}>
             <Component {...pageProps} />
