@@ -1,20 +1,28 @@
 [
   {
+    "id": 10,
+    "title": "그리미티",
+    "description": "그림 그리는 사람들을 위한 그림 전문 커뮤니티입니다.",
+    "image": "/image/grimity.png",
+    "github": "https://github.com/Grimity/FE-Grimity",
+    "link": "https://www.grimity.com/",
+    "figma": "https://www.figma.com/design/B1azx6Xjy9WiAHyaceGqeY/Untitled?node-id=0-1&p=f&t=5Hs0c6tusj5rDt7g-0"
+  },
+  {
     "id": 9,
+    "title": "HelloFit",
+    "description": "공공데이터 활용 공모전에 제출한 지도 기반 스포츠 강좌 정보 제공 서비스입니다.",
+    "image": "/image/hellofit.png",
+    "github": "https://github.com/gunganghaljido/HelloFit_Front",
+    "link": "https://www.hellofit.site/"
+  },
+  {
+    "id": 8,
     "title": "CHESSMONG",
     "description": "체스 초보자들을 위한 체스 오프닝 강의 검색 사이트입니다.",
     "image": "/image/chessmong.png",
     "github": "https://github.com/chessmong/FE_Chessmong_user",
     "link": "https://chessmong.com/"
-  },
-  {
-    "id": 8,
-    "title": "HelloFit",
-    "description": "공공데이터 활용 공모전에 제출한 지도 기반 스포츠 강좌 정보 제공 서비스입니다.",
-    "image": "/image/hellofit.png",
-    "github": "https://github.com/gunganghaljido/HelloFit_Front",
-    "link": "https://www.hellofit.site/",
-    "figma": "https://www.figma.com/design/XmFOryOQD8Pyqtd126Cjfz/%ED%97%AC%EB%A1%9C%ED%95%8F?node-id=15-981&t=0JI49GjN0rDnXJQY-1"
   },
   {
     "id": 7,
