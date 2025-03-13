@@ -11,6 +11,7 @@ export default function Card({
   github,
   link,
   figma,
+  reflection,
   onClick,
 }: CardProps) {
   const handleEnterKey = (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -36,17 +37,6 @@ export default function Card({
           <p className={styles.description}>{description}</p>
         </div>
         <div className={styles.links}>
-          {github && (
-            <Link href={github} target="_blank">
-              <Image
-                src="/icon/github_icon.svg"
-                width={30}
-                height={30}
-                alt="github icon"
-                className={styles.link}
-              />
-            </Link>
-          )}
           {link && (
             <Link href={link} target="_blank">
               <Image
@@ -58,6 +48,17 @@ export default function Card({
               />
             </Link>
           )}
+          {github && (
+            <Link href={github} target="_blank">
+              <Image
+                src="/icon/github_icon.svg"
+                width={30}
+                height={30}
+                alt="github icon"
+                className={styles.link}
+              />
+            </Link>
+          )}
           {figma && (
             <Link href={figma} target="_blank">
               <Image
@@ -65,6 +66,17 @@ export default function Card({
                 width={30}
                 height={30}
                 alt="figma icon"
+                className={styles.link}
+              />
+            </Link>
+          )}
+          {reflection && (
+            <Link href={reflection} target="_blank">
+              <Image
+                src="/icon/write.svg"
+                width={30}
+                height={30}
+                alt="reflection icon"
                 className={styles.link}
               />
             </Link>

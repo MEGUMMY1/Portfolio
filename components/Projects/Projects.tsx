@@ -66,6 +66,7 @@ export default function Projects() {
             github={project.github}
             link={project.link}
             figma={project.figma}
+            reflection={project.reflection}
             onClick={() => openProjectDetail(project)}
           />
         ))}
